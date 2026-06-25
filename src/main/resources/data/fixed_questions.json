@@ -1,0 +1,272 @@
+﻿[
+  {
+    "type": "COMMONSENSE",
+    "content": "世界上最高的山峰是哪一座？",
+    "optionA": "珠穆朗玛峰",
+    "optionB": "乔戈里峰",
+    "optionC": "干城章嘉峰",
+    "optionD": "洛子峰",
+    "correctAnswer": "A"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "人体最大的器官是什么？",
+    "optionA": "心脏",
+    "optionB": "肝脏",
+    "optionC": "皮肤",
+    "optionD": "肺",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "水的化学式是什么？",
+    "optionA": "CO2",
+    "optionB": "H2O",
+    "optionC": "O2",
+    "optionD": "NaCl",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "一年有多少个星期？",
+    "optionA": "48",
+    "optionB": "50",
+    "optionC": "52",
+    "optionD": "54",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "中国的首都是哪座城市？",
+    "optionA": "上海",
+    "optionB": "广州",
+    "optionC": "北京",
+    "optionD": "深圳",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "太阳从哪个方向升起？",
+    "optionA": "东方",
+    "optionB": "西方",
+    "optionC": "南方",
+    "optionD": "北方",
+    "correctAnswer": "A"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "下列哪个是哺乳动物？",
+    "optionA": "鲨鱼",
+    "optionB": "海豚",
+    "optionC": "鳄鱼",
+    "optionD": "企鹅",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "地球上最大的海洋是？",
+    "optionA": "大西洋",
+    "optionB": "印度洋",
+    "optionC": "太平洋",
+    "optionD": "北冰洋",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "光年是什么的单位？",
+    "optionA": "时间",
+    "optionB": "距离",
+    "optionC": "亮度",
+    "optionD": "速度",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "下列哪种气体是植物光合作用必需的？",
+    "optionA": "氧气",
+    "optionB": "氮气",
+    "optionC": "二氧化碳",
+    "optionD": "氢气",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "人体有多少块骨头（成人）？",
+    "optionA": "106",
+    "optionB": "206",
+    "optionC": "306",
+    "optionD": "406",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "世界上人口最多的国家是？",
+    "optionA": "美国",
+    "optionB": "印度",
+    "optionC": "中国",
+    "optionD": "俄罗斯",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "冰箱可以制冷是因为什么原理？",
+    "optionA": "压缩机驱动制冷剂循环",
+    "optionB": "内部放置冰块",
+    "optionC": "隔绝外部热量传导",
+    "optionD": "风扇吹冷风",
+    "correctAnswer": "A"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "下列哪个不是四大发明之一？",
+    "optionA": "造纸术",
+    "optionB": "指南针",
+    "optionC": "火药",
+    "optionD": "地动仪",
+    "correctAnswer": "D"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "牛奶富含哪种对人体有益的矿物质？",
+    "optionA": "铁",
+    "optionB": "钙",
+    "optionC": "锌",
+    "optionD": "碘",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "地球绕太阳一圈大约需要多长时间？",
+    "optionA": "一天",
+    "optionB": "一个月",
+    "optionC": "一年",
+    "optionD": "一周",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "下列哪个是可再生能源？",
+    "optionA": "煤炭",
+    "optionB": "石油",
+    "optionC": "太阳能",
+    "optionD": "天然气",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "人体正常体温大约是多少摄氏度？",
+    "optionA": "35.5",
+    "optionB": "36.5",
+    "optionC": "37.5",
+    "optionD": "38.5",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "世界上使用人数最多的语言是？",
+    "optionA": "英语",
+    "optionB": "西班牙语",
+    "optionC": "汉语",
+    "optionD": "印地语",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "COMMONSENSE",
+    "content": "以下哪种动物是卵生的？",
+    "optionA": "狗",
+    "optionB": "猫",
+    "optionC": "鸭嘴兽",
+    "optionD": "兔子",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "LOGIC",
+    "content": "1, 3, 5, 7, ? 下一个数字是？",
+    "optionA": "8",
+    "optionB": "9",
+    "optionC": "10",
+    "optionD": "11",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "LOGIC",
+    "content": "如果所有的猫都会爬树，Tom是一只猫，那么以下正确的是？",
+    "optionA": "Tom不会爬树",
+    "optionB": "Tom可能会爬树",
+    "optionC": "Tom一定会爬树",
+    "optionD": "无法判断",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "LOGIC",
+    "content": "2, 6, 18, 54, ? 下一个数字是？",
+    "optionA": "108",
+    "optionB": "162",
+    "optionC": "216",
+    "optionD": "72",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "LOGIC",
+    "content": "甲比乙高，丙比乙矮，丁比甲矮但比乙高。四人中最矮的是？",
+    "optionA": "甲",
+    "optionB": "乙",
+    "optionC": "丙",
+    "optionD": "丁",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "LOGIC",
+    "content": "一个农场有鸡和兔共30只，共有88条腿，请问兔子有几只？",
+    "optionA": "4",
+    "optionB": "8",
+    "optionC": "12",
+    "optionD": "16",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "LOGIC",
+    "content": "ABCDE五个字母排列，如果A不能在第一位，B不能在第5位，有多少种排列方式？",
+    "optionA": "78",
+    "optionB": "96",
+    "optionC": "108",
+    "optionD": "120",
+    "correctAnswer": "A"
+  },
+  {
+    "type": "LOGIC",
+    "content": "如果下雨则地面湿，现在地面是湿的，可以推出？",
+    "optionA": "一定下雨了",
+    "optionB": "可能下雨了",
+    "optionC": "一定没下雨",
+    "optionD": "不可能下雨",
+    "correctAnswer": "B"
+  },
+  {
+    "type": "LOGIC",
+    "content": "1, 1, 2, 3, 5, 8, ? 斐波那契数列下一个数是？",
+    "optionA": "11",
+    "optionB": "12",
+    "optionC": "13",
+    "optionD": "15",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "LOGIC",
+    "content": "某商品先涨价20%，又降价20%，现价与原价相比？",
+    "optionA": "一样",
+    "optionB": "更贵",
+    "optionC": "更便宜",
+    "optionD": "无法比较",
+    "correctAnswer": "C"
+  },
+  {
+    "type": "LOGIC",
+    "content": "三盏灯分别由三个开关控制，你只能进房间一次，如何判断哪个开关控制哪盏灯？",
+    "optionA": "打开两个开关等几分钟再关一个",
+    "optionB": "依次打开每个开关",
+    "optionC": "同时打开三个开关",
+    "optionD": "无法判断",
+    "correctAnswer": "A"
+  }
+]

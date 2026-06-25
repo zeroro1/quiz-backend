@@ -20,3 +20,6 @@ wx.app-secret=YOUR_WX_APP_SECRET
 agnes.ai.api-key=YOUR_AGNES_API_KEY
 agnes.ai.api-url=https://api.agnes-ai.com/v1/chat/completions
 agnes.ai.model=agnes-gpt-4o
+
+# Quiz mode: AI_ONLY = only use AI, FALLBACK = use fixed pool with AI fallback
+agnes.quiz.mode=AI_ONLY

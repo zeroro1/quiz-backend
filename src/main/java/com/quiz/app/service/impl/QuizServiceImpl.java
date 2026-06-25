@@ -1,4 +1,4 @@
-﻿package com.quiz.app.service.impl;
+package com.quiz.app.service.impl;
 
 import com.quiz.app.dto.*;
 import com.quiz.app.entity.Leaderboard;
@@ -115,7 +115,7 @@ public class QuizServiceImpl implements QuizService {
             detail.setContent(question.getContent());
             detail.setCorrectAnswer(question.getCorrectAnswer());
             detail.setUserAnswer(item.getAnswer());
-            detail.setCorrect(isCorrect);
+            detail.setIsCorrect(isCorrect);
             detail.setTimeTaken(item.getTimeTaken());
             details.add(detail);
         }
@@ -181,7 +181,7 @@ public class QuizServiceImpl implements QuizService {
             d.setContent(r.getQuestionContent());
             d.setCorrectAnswer(r.getCorrectAnswer());
             d.setUserAnswer(r.getUserAnswer());
-            d.setCorrect(r.getIsCorrect());
+            d.setIsCorrect(r.getIsCorrect());
             d.setTimeTaken(r.getTimeTakenSeconds());
             details.add(d);
         }

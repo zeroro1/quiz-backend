@@ -1,5 +1,7 @@
 ﻿package com.quiz.app.service.impl;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.quiz.app.dto.QuestionDTO;
 import com.quiz.app.service.AiQuizGeneratorService;
 import lombok.RequiredArgsConstructor;
@@ -8,11 +10,14 @@ import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -20,6 +25,7 @@ import java.util.List;
 public class AgnesAiQuizGeneratorServiceImpl implements AiQuizGeneratorService {
     
     private final OkHttpClient httpClient;
+    private final ObjectMapper objectMapper;
     
     @Value("${agnes.ai.api-key}")
     private String apiKey;
@@ -60,6 +66,20 @@ public class AgnesAiQuizGeneratorServiceImpl implements AiQuizGeneratorService {
     
     @Override
     public List<QuestionDTO> generateQuestions() {
+        try {
+            List<QuestionDTO> questions = generateFromAi();
+            if (questions != null && questions.size() == 10) {
+                return questions;
+            }
+            log.warn("AI generated {} questions, falling back to fixed pool", 
+                     questions != null ? questions.size() : 0);
+        } catch (Exception e) {
+            log.error("AI generation failed, falling back to fixed pool", e);
+        }
+        return generateFromFixedPool();
+    }
+    
+    private List<QuestionDTO> generateFromAi() throws IOException {
         RequestBody body = new RequestBody() {
             @Override
             public MediaType contentType() {
@@ -104,11 +124,11 @@ public class AgnesAiQuizGeneratorServiceImpl implements AiQuizGeneratorService {
             String responseBody = response.body().string();
             JSONObject jsonResponse = new JSONObject(responseBody);
             String content = jsonResponse.getJSONObject("choices")
-                .getJSONObject(0)
+                .getJSONObject("0")
                 .getJSONObject("message")
                 .getString("content");
             
-            log.info("AI generated content: {}", content);
+            log.info("AI generated content length: {}", content.length());
             
             // 清理可能的 markdown 标记
             content = content.replaceAll("^```json\\s*", "").replaceAll("\\s*```$", "").trim();
@@ -130,12 +150,53 @@ public class AgnesAiQuizGeneratorServiceImpl implements AiQuizGeneratorService {
                 questions.add(dto);
             }
             
-            log.info("Generated {} questions", questions.size());
+            log.info("AI generated {} questions successfully", questions.size());
             return questions;
             
         } catch (Exception e) {
-            log.error("Failed to generate questions", e);
-            throw new RuntimeException("AI 出题失败: " + e.getMessage());
+            throw new IOException("AI 出题失败: " + e.getMessage(), e);
+        }
+    }
+    
+    @Override
+    public List<QuestionDTO> generateFromFixedPool() {
+        try {
+            // 加载固定题库
+            ClassPathResource resource = new ClassPathResource("data/fixed_questions.json");
+            InputStream is = resource.getInputStream();
+            String jsonStr = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            List<QuestionDTO> allQuestions = objectMapper.readValue(
+                jsonStr, new TypeReference<List<QuestionDTO>>() {});
+            
+            // 按类型分组并随机打乱
+            List<QuestionDTO> commonsense = allQuestions.stream()
+                .filter(q -> "COMMONSENSE".equals(q.getType()))
+                .collect(Collectors.toList());
+            List<QuestionDTO> logic = allQuestions.stream()
+                .filter(q -> "LOGIC".equals(q.getType()))
+                .collect(Collectors.toList());
+            
+            Collections.shuffle(commonsense);
+            Collections.shuffle(logic);
+            
+            // 各取5道
+            List<QuestionDTO> result = new ArrayList<>();
+            result.addAll(commonsense.subList(0, Math.min(5, commonsense.size())));
+            result.addAll(logic.subList(0, Math.min(5, logic.size())));
+            
+            // 打乱顺序
+            Collections.shuffle(result);
+            
+            log.info("Fixed pool generated {} questions (COMMONSENSE: {}, LOGIC: {})", 
+                     result.size(), 
+                     (int)result.stream().filter(q -> "COMMONSENSE".equals(q.getType())).count(),
+                     (int)result.stream().filter(q -> "LOGIC".equals(q.getType())).count());
+            
+            return result;
+            
+        } catch (Exception e) {
+            log.error("Failed to load fixed question pool", e);
+            throw new RuntimeException("加载题库失败: " + e.getMessage());
         }
     }
 }

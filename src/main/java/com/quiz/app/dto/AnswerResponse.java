@@ -20,7 +20,7 @@ public class AnswerResponse {
         private String content;
         private String correctAnswer;
         private String userAnswer;
-        private boolean isCorrect;
+        private Boolean isCorrect;
         private Integer timeTaken;
     }
 }

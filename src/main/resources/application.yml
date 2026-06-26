@@ -29,9 +29,5 @@ agnes:
   ai:
     api-key: YOUR_AGNES_API_KEY
     api-url: https://api.agnes-ai.com/v1/chat/completions
-    model: agnes-gpt-4o
-
-# Quiz mode: AI_ONLY = only use AI, FALLBACK = use fixed pool with AI fallback
-agnes:
-  quiz:
-    mode: AI_ONLY
+    model: Agnes-2.0-Flash
+    quiz-mode: AI_ONLY

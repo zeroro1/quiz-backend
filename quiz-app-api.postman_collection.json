@@ -1,0 +1,249 @@
+﻿{
+    "variable":  [
+                     {
+                         "key":  "baseUrl",
+                         "value":  "http://localhost:8080"
+                     }
+                 ],
+    "info":  {
+                 "name":  "Quiz App API",
+                 "schema":  "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+                 "_postman_id":  "quiz-app-api-collection"
+             },
+    "item":  [
+                 {
+                     "request":  {
+                                     "url":  {
+                                                 "host":  "{{baseUrl}}",
+                                                 "raw":  "{{baseUrl}}/api/wx/login",
+                                                 "path":  [
+                                                              "api",
+                                                              "wx",
+                                                              "login"
+                                                          ]
+                                             },
+                                     "method":  "POST",
+                                     "body":  {
+                                                  "raw":  "{`n  \"code\": \"wx_login_code_here\"`n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "contentType":  "application/json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 },
+                     "name":  "微信登录",
+                     "response":  [
+
+                                  ]
+                 },
+                 {
+                     "request":  {
+                                     "url":  {
+                                                 "host":  "{{baseUrl}}",
+                                                 "raw":  "{{baseUrl}}/api/wx/updateUserInfo",
+                                                 "path":  [
+                                                              "api",
+                                                              "wx",
+                                                              "updateUserInfo"
+                                                          ]
+                                             },
+                                     "method":  "POST",
+                                     "body":  {
+                                                  "raw":  "{`n  \"userId\": 1,`n  \"nickname\": \"张三\",`n  \"avatar\": \"https://example.com/avatar.png\"`n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "contentType":  "application/json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 },
+                     "name":  "更新用户信息",
+                     "response":  [
+
+                                  ]
+                 },
+                 {
+                     "request":  {
+                                     "url":  {
+                                                 "host":  "{{baseUrl}}",
+                                                 "raw":  "{{baseUrl}}/api/admin/createUser",
+                                                 "path":  [
+                                                              "api",
+                                                              "admin",
+                                                              "createUser"
+                                                          ]
+                                             },
+                                     "method":  "POST",
+                                     "body":  {
+                                                  "raw":  "{`n  \"openid\": \"test_openid_001\",`n  \"nickname\": \"测试用户A\",`n  \"avatar\": \"\"`n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "contentType":  "application/json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 },
+                     "name":  "创建测试用户 (Admin)",
+                     "response":  [
+
+                                  ]
+                 },
+                 {
+                     "request":  {
+                                     "url":  {
+                                                 "host":  "{{baseUrl}}",
+                                                 "raw":  "{{baseUrl}}/api/quiz/start",
+                                                 "path":  [
+                                                              "api",
+                                                              "quiz",
+                                                              "start"
+                                                          ]
+                                             },
+                                     "method":  "POST",
+                                     "body":  {
+                                                  "raw":  "{`n  \"userId\": 1`n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "contentType":  "application/json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 },
+                     "name":  "开始答题",
+                     "response":  [
+
+                                  ]
+                 },
+                 {
+                     "request":  {
+                                     "url":  {
+                                                 "host":  "{{baseUrl}}",
+                                                 "raw":  "{{baseUrl}}/api/quiz/submit",
+                                                 "path":  [
+                                                              "api",
+                                                              "quiz",
+                                                              "submit"
+                                                          ]
+                                             },
+                                     "method":  "POST",
+                                     "body":  {
+                                                  "raw":  "{`n  \"sessionId\": 1,`n  \"userId\": 1,`n  \"answers\": [`n    {`n      \"questionIndex\": 0,`n      \"answer\": \"A\",`n      \"timeTaken\": 12`n    },`n    {`n      \"questionIndex\": 1,`n      \"answer\": \"B\",`n      \"timeTaken\": 8`n    },`n    {`n      \"questionIndex\": 2,`n      \"answer\": \"C\",`n      \"timeTaken\": 15`n    },`n    {`n      \"questionIndex\": 3,`n      \"answer\": \"A\",`n      \"timeTaken\": 10`n    },`n    {`n      \"questionIndex\": 4,`n      \"answer\": \"B\",`n      \"timeTaken\": 20`n    },`n    {`n      \"questionIndex\": 5,`n      \"answer\": \"C\",`n      \"timeTaken\": 14`n    },`n    {`n      \"questionIndex\": 6,`n      \"answer\": \"A\",`n      \"timeTaken\": 9`n    },`n    {`n      \"questionIndex\": 7,`n      \"answer\": \"D\",`n      \"timeTaken\": 11`n    },`n    {`n      \"questionIndex\": 8,`n      \"answer\": \"B\",`n      \"timeTaken\": 16`n    },`n    {`n      \"questionIndex\": 9,`n      \"answer\": \"C\",`n      \"timeTaken\": 7`n    }`n  ]`n}",
+                                                  "options":  {
+                                                                  "raw":  {
+                                                                              "contentType":  "application/json"
+                                                                          }
+                                                              },
+                                                  "mode":  "raw"
+                                              },
+                                     "header":  [
+                                                    {
+                                                        "key":  "Content-Type",
+                                                        "value":  "application/json"
+                                                    }
+                                                ]
+                                 },
+                     "name":  "提交答案",
+                     "response":  [
+
+                                  ]
+                 },
+                 {
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "host":  "{{baseUrl}}",
+                                                 "raw":  "{{baseUrl}}/api/leaderboard/COMMONSENSE",
+                                                 "path":  [
+                                                              "api",
+                                                              "leaderboard",
+                                                              "COMMONSENSE"
+                                                          ]
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 },
+                     "name":  "常识排行榜",
+                     "response":  [
+
+                                  ]
+                 },
+                 {
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "host":  "{{baseUrl}}",
+                                                 "raw":  "{{baseUrl}}/api/leaderboard/LOGIC",
+                                                 "path":  [
+                                                              "api",
+                                                              "leaderboard",
+                                                              "LOGIC"
+                                                          ]
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 },
+                     "name":  "逻辑排行榜",
+                     "response":  [
+
+                                  ]
+                 },
+                 {
+                     "request":  {
+                                     "method":  "GET",
+                                     "url":  {
+                                                 "query":  [
+                                                               {
+                                                                   "key":  "userId",
+                                                                   "value":  "1"
+                                                               }
+                                                           ],
+                                                 "host":  "{{baseUrl}}",
+                                                 "raw":  "{{baseUrl}}/api/user/records?userId=1",
+                                                 "path":  [
+                                                              "api",
+                                                              "user",
+                                                              "records"
+                                                          ]
+                                             },
+                                     "header":  [
+
+                                                ]
+                                 },
+                     "name":  "我的答题记录",
+                     "response":  [
+
+                                  ]
+                 }
+             ]
+}

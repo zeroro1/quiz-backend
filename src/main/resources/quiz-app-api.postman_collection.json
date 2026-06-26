@@ -22,7 +22,7 @@
         },
         "method": "POST",
         "body": {
-          "raw": "{\\n  \"code\": \"wx_login_code_here\"\\n}",
+          "raw": "{  \"code\": \"wx_login_code_here\"}",
           "mode": "raw"
         },
         "header": [
@@ -47,7 +47,7 @@
         },
         "method": "POST",
         "body": {
-          "raw": "{\\n  \"userId\": 1,\\n  \"nickname\": \"张三\",\\n  \"avatar\": \"https://example.com/avatar.png\"\\n}",
+          "raw": "{  \"userId\": 1,  \"nickname\": \"张三\",  \"avatar\": \"https://example.com/avatar.png\"}",
           "mode": "raw"
         },
         "header": [
@@ -72,7 +72,7 @@
         },
         "method": "POST",
         "body": {
-          "raw": "{\\n  \"openid\": \"test_openid_001\",\\n  \"nickname\": \"测试用户A\",\\n  \"avatar\": \"\"\\n}",
+          "raw": "{  \"openid\": \"test_openid_001\",  \"nickname\": \"测试用户A\",  \"avatar\": \"\"}",
           "mode": "raw"
         },
         "header": [
@@ -97,7 +97,7 @@
         },
         "method": "POST",
         "body": {
-          "raw": "{\\n  \"userId\": 1\\n}",
+          "raw": "{  \"userId\": 1}",
           "mode": "raw"
         },
         "header": [
@@ -122,7 +122,7 @@
         },
         "method": "POST",
         "body": {
-          "raw": "{\\n  \"sessionId\": 1,\\n  \"userId\": 1,\\n  \"answers\": [\\n    {\"questionIndex\": 0, \"answer\": \"A\", \"timeTaken\": 12},\\n    {\"questionIndex\": 1, \"answer\": \"B\", \"timeTaken\": 8},\\n    {\"questionIndex\": 2, \"answer\": \"C\", \"timeTaken\": 15},\\n    {\"questionIndex\": 3, \"answer\": \"A\", \"timeTaken\": 10},\\n    {\"questionIndex\": 4, \"answer\": \"B\", \"timeTaken\": 20},\\n    {\"questionIndex\": 5, \"answer\": \"C\", \"timeTaken\": 14},\\n    {\"questionIndex\": 6, \"answer\": \"A\", \"timeTaken\": 9},\\n    {\"questionIndex\": 7, \"answer\": \"D\", \"timeTaken\": 11},\\n    {\"questionIndex\": 8, \"answer\": \"B\", \"timeTaken\": 16},\\n    {\"questionIndex\": 9, \"answer\": \"C\", \"timeTaken\": 7}\\n  ]\\n}",
+          "raw": "{  \"sessionId\": 1,  \"userId\": 1,  \"answers\": [    {\"questionIndex\": 0, \"answer\": \"A\", \"timeTaken\": 12},    {\"questionIndex\": 1, \"answer\": \"B\", \"timeTaken\": 8},    {\"questionIndex\": 2, \"answer\": \"C\", \"timeTaken\": 15},    {\"questionIndex\": 3, \"answer\": \"A\", \"timeTaken\": 10},    {\"questionIndex\": 4, \"answer\": \"B\", \"timeTaken\": 20},    {\"questionIndex\": 5, \"answer\": \"C\", \"timeTaken\": 14},    {\"questionIndex\": 6, \"answer\": \"A\", \"timeTaken\": 9},    {\"questionIndex\": 7, \"answer\": \"D\", \"timeTaken\": 11},    {\"questionIndex\": 8, \"answer\": \"B\", \"timeTaken\": 16},    {\"questionIndex\": 9, \"answer\": \"C\", \"timeTaken\": 7}  ]}",
           "mode": "raw"
         },
         "header": [

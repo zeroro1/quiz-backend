@@ -1,4 +1,4 @@
-﻿package com.quiz.app.dto;
+package com.quiz.app.dto;
 
 import lombok.Data;
 import java.time.LocalDateTime;

@@ -1,4 +1,4 @@
-﻿package com.quiz.app.service.impl;
+package com.quiz.app.service.impl;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

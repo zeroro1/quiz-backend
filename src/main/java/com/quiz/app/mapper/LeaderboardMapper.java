@@ -1,4 +1,4 @@
-﻿package com.quiz.app.mapper;
+package com.quiz.app.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.quiz.app.entity.Leaderboard;

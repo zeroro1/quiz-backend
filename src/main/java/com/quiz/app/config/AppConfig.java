@@ -1,4 +1,4 @@
-﻿package com.quiz.app.config;
+package com.quiz.app.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.OkHttpClient;

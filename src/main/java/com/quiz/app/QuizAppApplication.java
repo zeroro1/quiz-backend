@@ -1,4 +1,4 @@
-﻿package com.quiz.app;
+package com.quiz.app;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

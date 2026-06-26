@@ -1,4 +1,4 @@
-﻿package com.quiz.app.entity;
+package com.quiz.app.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;

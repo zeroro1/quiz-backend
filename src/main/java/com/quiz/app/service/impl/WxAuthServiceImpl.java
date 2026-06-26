@@ -1,4 +1,4 @@
-﻿package com.quiz.app.service.impl;
+package com.quiz.app.service.impl;
 
 import com.quiz.app.dto.*;
 import com.quiz.app.entity.WxUser;

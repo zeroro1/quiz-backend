@@ -1,4 +1,4 @@
-﻿package com.quiz.app.controller;
+package com.quiz.app.controller;
 
 import com.quiz.app.dto.*;
 import com.quiz.app.entity.WxUser;

@@ -1,17 +1,15 @@
 ﻿{
-    "variable":  [
-                     {
-                         "key":  "baseUrl",
-                         "value":  "http://localhost:8080"
-                     }
-                 ],
+    "variable":  {
+                     "key":  "baseUrl",
+                     "value":  "http://localhost:8080"
+                 },
     "info":  {
                  "name":  "Quiz App API",
-                 "schema":  "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-                 "_postman_id":  "quiz-app-api-collection"
+                 "schema":  "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
              },
     "item":  [
                  {
+                     "name":  "1. 微信登录",
                      "request":  {
                                      "url":  {
                                                  "host":  "{{baseUrl}}",
@@ -24,12 +22,7 @@
                                              },
                                      "method":  "POST",
                                      "body":  {
-                                                  "raw":  "{`n  \"code\": \"wx_login_code_here\"`n}",
-                                                  "options":  {
-                                                                  "raw":  {
-                                                                              "contentType":  "application/json"
-                                                                          }
-                                                              },
+                                                  "raw":  "{\\n  \"code\": \"wx_login_code_here\"\\n}",
                                                   "mode":  "raw"
                                               },
                                      "header":  [
@@ -38,13 +31,10 @@
                                                         "value":  "application/json"
                                                     }
                                                 ]
-                                 },
-                     "name":  "微信登录",
-                     "response":  [
-
-                                  ]
+                                 }
                  },
                  {
+                     "name":  "2. 更新用户信息",
                      "request":  {
                                      "url":  {
                                                  "host":  "{{baseUrl}}",
@@ -57,12 +47,7 @@
                                              },
                                      "method":  "POST",
                                      "body":  {
-                                                  "raw":  "{`n  \"userId\": 1,`n  \"nickname\": \"张三\",`n  \"avatar\": \"https://example.com/avatar.png\"`n}",
-                                                  "options":  {
-                                                                  "raw":  {
-                                                                              "contentType":  "application/json"
-                                                                          }
-                                                              },
+                                                  "raw":  "{\\n  \"userId\": 1,\\n  \"nickname\": \"张三\",\\n  \"avatar\": \"https://example.com/avatar.png\"\\n}",
                                                   "mode":  "raw"
                                               },
                                      "header":  [
@@ -71,13 +56,10 @@
                                                         "value":  "application/json"
                                                     }
                                                 ]
-                                 },
-                     "name":  "更新用户信息",
-                     "response":  [
-
-                                  ]
+                                 }
                  },
                  {
+                     "name":  "3. 创建测试用户 (Admin)",
                      "request":  {
                                      "url":  {
                                                  "host":  "{{baseUrl}}",
@@ -90,12 +72,7 @@
                                              },
                                      "method":  "POST",
                                      "body":  {
-                                                  "raw":  "{`n  \"openid\": \"test_openid_001\",`n  \"nickname\": \"测试用户A\",`n  \"avatar\": \"\"`n}",
-                                                  "options":  {
-                                                                  "raw":  {
-                                                                              "contentType":  "application/json"
-                                                                          }
-                                                              },
+                                                  "raw":  "{\\n  \"openid\": \"test_openid_001\",\\n  \"nickname\": \"测试用户A\",\\n  \"avatar\": \"\"\\n}",
                                                   "mode":  "raw"
                                               },
                                      "header":  [
@@ -104,13 +81,10 @@
                                                         "value":  "application/json"
                                                     }
                                                 ]
-                                 },
-                     "name":  "创建测试用户 (Admin)",
-                     "response":  [
-
-                                  ]
+                                 }
                  },
                  {
+                     "name":  "4. 开始答题",
                      "request":  {
                                      "url":  {
                                                  "host":  "{{baseUrl}}",
@@ -123,12 +97,7 @@
                                              },
                                      "method":  "POST",
                                      "body":  {
-                                                  "raw":  "{`n  \"userId\": 1`n}",
-                                                  "options":  {
-                                                                  "raw":  {
-                                                                              "contentType":  "application/json"
-                                                                          }
-                                                              },
+                                                  "raw":  "{\\n  \"userId\": 1\\n}",
                                                   "mode":  "raw"
                                               },
                                      "header":  [
@@ -137,13 +106,10 @@
                                                         "value":  "application/json"
                                                     }
                                                 ]
-                                 },
-                     "name":  "开始答题",
-                     "response":  [
-
-                                  ]
+                                 }
                  },
                  {
+                     "name":  "5. 提交答案",
                      "request":  {
                                      "url":  {
                                                  "host":  "{{baseUrl}}",
@@ -156,12 +122,7 @@
                                              },
                                      "method":  "POST",
                                      "body":  {
-                                                  "raw":  "{`n  \"sessionId\": 1,`n  \"userId\": 1,`n  \"answers\": [`n    {`n      \"questionIndex\": 0,`n      \"answer\": \"A\",`n      \"timeTaken\": 12`n    },`n    {`n      \"questionIndex\": 1,`n      \"answer\": \"B\",`n      \"timeTaken\": 8`n    },`n    {`n      \"questionIndex\": 2,`n      \"answer\": \"C\",`n      \"timeTaken\": 15`n    },`n    {`n      \"questionIndex\": 3,`n      \"answer\": \"A\",`n      \"timeTaken\": 10`n    },`n    {`n      \"questionIndex\": 4,`n      \"answer\": \"B\",`n      \"timeTaken\": 20`n    },`n    {`n      \"questionIndex\": 5,`n      \"answer\": \"C\",`n      \"timeTaken\": 14`n    },`n    {`n      \"questionIndex\": 6,`n      \"answer\": \"A\",`n      \"timeTaken\": 9`n    },`n    {`n      \"questionIndex\": 7,`n      \"answer\": \"D\",`n      \"timeTaken\": 11`n    },`n    {`n      \"questionIndex\": 8,`n      \"answer\": \"B\",`n      \"timeTaken\": 16`n    },`n    {`n      \"questionIndex\": 9,`n      \"answer\": \"C\",`n      \"timeTaken\": 7`n    }`n  ]`n}",
-                                                  "options":  {
-                                                                  "raw":  {
-                                                                              "contentType":  "application/json"
-                                                                          }
-                                                              },
+                                                  "raw":  "{\\n  \"sessionId\": 1,\\n  \"userId\": 1,\\n  \"answers\": [\\n    {\"questionIndex\": 0, \"answer\": \"A\", \"timeTaken\": 12},\\n    {\"questionIndex\": 1, \"answer\": \"B\", \"timeTaken\": 8},\\n    {\"questionIndex\": 2, \"answer\": \"C\", \"timeTaken\": 15},\\n    {\"questionIndex\": 3, \"answer\": \"A\", \"timeTaken\": 10},\\n    {\"questionIndex\": 4, \"answer\": \"B\", \"timeTaken\": 20},\\n    {\"questionIndex\": 5, \"answer\": \"C\", \"timeTaken\": 14},\\n    {\"questionIndex\": 6, \"answer\": \"A\", \"timeTaken\": 9},\\n    {\"questionIndex\": 7, \"answer\": \"D\", \"timeTaken\": 11},\\n    {\"questionIndex\": 8, \"answer\": \"B\", \"timeTaken\": 16},\\n    {\"questionIndex\": 9, \"answer\": \"C\", \"timeTaken\": 7}\\n  ]\\n}",
                                                   "mode":  "raw"
                                               },
                                      "header":  [
@@ -170,13 +131,10 @@
                                                         "value":  "application/json"
                                                     }
                                                 ]
-                                 },
-                     "name":  "提交答案",
-                     "response":  [
-
-                                  ]
+                                 }
                  },
                  {
+                     "name":  "6. 常识排行榜",
                      "request":  {
                                      "method":  "GET",
                                      "url":  {
@@ -191,13 +149,10 @@
                                      "header":  [
 
                                                 ]
-                                 },
-                     "name":  "常识排行榜",
-                     "response":  [
-
-                                  ]
+                                 }
                  },
                  {
+                     "name":  "7. 逻辑排行榜",
                      "request":  {
                                      "method":  "GET",
                                      "url":  {
@@ -212,13 +167,10 @@
                                      "header":  [
 
                                                 ]
-                                 },
-                     "name":  "逻辑排行榜",
-                     "response":  [
-
-                                  ]
+                                 }
                  },
                  {
+                     "name":  "8. 我的答题记录",
                      "request":  {
                                      "method":  "GET",
                                      "url":  {
@@ -239,11 +191,7 @@
                                      "header":  [
 
                                                 ]
-                                 },
-                     "name":  "我的答题记录",
-                     "response":  [
-
-                                  ]
+                                 }
                  }
              ]
 }

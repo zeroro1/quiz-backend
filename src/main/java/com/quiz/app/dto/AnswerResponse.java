@@ -1,32 +1,7 @@
-﻿package com.quiz.app.dto;
+package com.quiz.app.dto;
 
 import lombok.Data;
 import java.util.List;
-
-@Data
-public class StartQuizRequest {
-    private Long userId;
-}
-
-@Data
-public class StartQuizResponse {
-    private Long sessionId;
-    private List<QuestionDTO> questions;
-}
-
-@Data
-public class AnswerRequest {
-    private Long sessionId;
-    private Long userId;
-    private List<AnswerItem> answers;
-
-    @Data
-    public static class AnswerItem {
-        private Integer questionIndex;  // 0-9
-        private String answer;           // A/B/C/D
-        private Integer timeTaken;       // 秒
-    }
-}
 
 @Data
 public class AnswerResponse {

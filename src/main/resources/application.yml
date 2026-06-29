@@ -22,7 +22,7 @@ mybatis-plus:
 # WeChat Mini Program configuration
 wx:
   app-id: wxeb839cd064ee3fe6
-  app-secret: YOUR_WX_APP_SECRET
+  app-secret: f758365e86b8ba3578c3a34f83a8607e
 
 # Agnes AI API configuration
 agnes:
